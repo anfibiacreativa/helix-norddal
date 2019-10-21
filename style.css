@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'AdobeClean-Bold';
+  font-display: swap;
+  src: url(https://theblogimages.adobe.com/wp-content/themes/red-timber/dist/fonts/AdobeClean-Bold.woff) format("woff"); }
+
+@font-face {
+  font-family: 'AdobeClean-Regular';
+  font-display: swap;
+  src: url(https://theblogimages.adobe.com/wp-content/themes/red-timber/dist/fonts/AdobeClean-Regular.woff) format("woff"); }
+
+@font-face {
+  font-family: 'AdobeClean-Light';
+  font-display: swap;
+  src: url(https://theblogimages.adobe.com/wp-content/themes/red-timber/dist/fonts/AdobeClean-Light.woff) format("woff"); }
+
+html,
+body {
+  font-family: "AdobeClean-Regular", Arial, sans-serif;
+  font-size: 16px; }
+
+.header__base {
+  width: 100%;
+  height: 30px;
+  background-color: red;
+  color: white; }
+

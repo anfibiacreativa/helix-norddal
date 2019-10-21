@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <title>${content.title}</title>
-    <link rel="stylesheet" href="src/styles/style.css"/>
+    <link rel="stylesheet" href="target/bundle.css"/>
 </head>
 <body>
 <div>
@@ -19,6 +19,6 @@ ${content.document.body.innerHTML}
 <em>This is random: ${content.random}</em>
 <br/>
 <em>This is dynamically generated: ${content.fromPreJS}</em>
-
+<script type="text/javascript" src="target/bundle.js"></script>
 </body>
 </html>

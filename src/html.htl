@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="src/styles/style.css"/>
 </head>
 <body>
-<header class="header__base>
-  <p>I am the header of your page</p>
-</header>
 <div>
   <em>Helix Pages generated this page on ${content.time}</em>
 </div>

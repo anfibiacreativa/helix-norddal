@@ -5,7 +5,7 @@ const alias = require('./project.alias');
 const paths = require('./project.config');
 
 module.exports = {
-  entry: '../src/js/index.js',
+  entry: '../sources/js/index.js',
   output: {
     path: path.resolve(__dirname, '..'),
     filename: 'bundle.js'

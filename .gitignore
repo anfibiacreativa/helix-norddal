@@ -1,0 +1,12 @@
+# Mac OS
+.DS_Store/
+
+# Node modules
+/node_modules/
+node_modules/
+
+# Helix CLI
+.hlx/
+
+# Logs
+logs/

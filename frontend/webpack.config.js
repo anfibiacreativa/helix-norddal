@@ -7,7 +7,7 @@ const paths = require('./project.config');
 module.exports = {
   entry: '../src/js/index.js',
   output: {
-    path: path.resolve(__dirname, '..', 'target'),
+    path: path.resolve(__dirname, '..'),
     filename: 'bundle.js'
   },
   module : {
@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-        filename: 'bundle.css'
+        filename: 'style.css'
     }) 
   ]
 };

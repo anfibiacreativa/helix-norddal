@@ -4,6 +4,7 @@
 # Node modules
 /node_modules/
 node_modules/
+package-lock.json
 
 # Helix CLI
 .hlx/

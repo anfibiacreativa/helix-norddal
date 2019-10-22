@@ -9,10 +9,8 @@ const layout = (type = 'blog') => {
     console.log(`####### I am a ${type} #######`);
 
     wrapSections = () => {
-      imgIndexNext = 2;
       const el = main[0];
       const nodes = Array.from(el.childNodes);
-      nodes.slice(imgIndexNext, -1);
 
       const blog = [];
       nodes.forEach((item) => {
@@ -25,25 +23,24 @@ const layout = (type = 'blog') => {
       const section = document.createElement('section');
       const aside = document.createElement('aside');
       const blogBody = document.createElement('div');
-
+      // empty main from content
+      el.innerHTML = '';
+      // create a new section and append the necessary divs
       el.appendChild(section);
       section.appendChild(aside);
       section.appendChild(blogBody);
 
       const blogContent = {
+        image: blog[0],
         author: blog[1],
         title: blog[2],
         text: blog[3]
       }
 
+      el.insertAdjacentHTML('afterbegin', blogContent.image);
       aside.insertAdjacentHTML('afterbegin', blogContent.author);
       blogBody.insertAdjacentHTML('afterbegin', blogContent.text);
       blogBody.insertAdjacentHTML('afterbegin', blogContent.title);
-
-      const hlxSection = document.querySelectorAll('.hlx-section:not(.image)');
-      hlxSection.forEach((item) => {
-        item.remove();
-      });
     }
     wrapSections();
   }

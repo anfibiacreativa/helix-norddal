@@ -192,6 +192,11 @@ section {
 
 .social {
   display: block; }
+  .social__list {
+    text-align: center; }
+    @media (min-width: 700px) {
+      .social__list {
+        text-align: left; } }
   .social__listItem {
     display: inline-block;
     position: relative; }

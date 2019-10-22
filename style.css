@@ -61,6 +61,15 @@ table {
   font-display: swap;
   src: url(https://theblogimages.adobe.com/wp-content/themes/red-timber/dist/fonts/AdobeClean-Light.woff) format("woff"); }
 
+p,
+ul {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto; }
+
 h1 {
   font-size: 3.375rem;
   line-height: 1.2;
@@ -79,6 +88,11 @@ h3 {
   line-height: 1.545454;
   margin-bottom: 30px; }
 
+h1,
+h2,
+h3 {
+  text-align: center; }
+
 html,
 body {
   font-family: "AdobeClean-Regular", Arial, sans-serif;
@@ -88,14 +102,15 @@ img {
   width: 100%;
   height: auto; }
 
-.header__base {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr; }
+.hlx-section.title p {
+  max-width: 100%; }
 
 .header__base {
   width: 100%;
   height: 30px;
   background-color: red;
-  color: white; }
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr; }
 

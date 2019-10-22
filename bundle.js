@@ -105,7 +105,18 @@ eval("console.log('I am the header js');\n\n//# sourceURL=webpack:///../sources/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_commons_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/commons/styles.scss */ \"../sources/styles/commons/styles.scss\");\n/* harmony import */ var _styles_commons_styles_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_commons_styles_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var components_js_header_header_entry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! components.js/header/header.entry.js */ \"../sources/components/header/header.entry.js\");\n/* harmony import */ var components_js_header_header_entry_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(components_js_header_header_entry_js__WEBPACK_IMPORTED_MODULE_1__);\n // Import custom components JS\n// To inject in the helix page\n\n\n\n//# sourceURL=webpack:///../sources/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_commons_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/commons/styles.scss */ \"../sources/styles/commons/styles.scss\");\n/* harmony import */ var _styles_commons_styles_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_commons_styles_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _layout_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layout.js */ \"../sources/js/layout.js\");\n/* harmony import */ var _layout_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_layout_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var components_js_header_header_entry_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components.js/header/header.entry.js */ \"../sources/components/header/header.entry.js\");\n/* harmony import */ var components_js_header_header_entry_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(components_js_header_header_entry_js__WEBPACK_IMPORTED_MODULE_2__);\n // Import custom components JS\n// To inject in the helix page\n\n\n\n\n//# sourceURL=webpack:///../sources/js/index.js?");
+
+/***/ }),
+
+/***/ "../sources/js/layout.js":
+/*!*******************************!*\
+  !*** ../sources/js/layout.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var types = ['page', 'blog'];\nvar main = document.getElementsByTagName('main');\nvar blogAuthor = main.querySelector('.blog-author');\nvar blogText = main.querySelector('.default');\n\nvar layout = function layout() {\n  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'blog';\n\n  if (type === 'blog') {\n    console.log('I am a blog!');\n\n    cacheSections = function cacheSections() {\n      main.removeChild(blogAuthor);\n      main.removeChild(blogText);\n      console.log('I have remove the items');\n    };\n  }\n}; // run layout\n\n\nlayout();\n\n//# sourceURL=webpack:///../sources/js/layout.js?");
 
 /***/ }),
 

@@ -6,7 +6,7 @@ h1 {
   line-height: 1.2;
   margin-top: .875rem;
   max-width: 775px;
-  margin: 60px auto;
+  margin: 50px auto 60px auto;
 
   @include breakpoint($b-large) {
       font-size: 3.375rem;

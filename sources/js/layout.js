@@ -9,14 +9,43 @@ const layout = (type = 'blog') => {
     console.log(`####### I am a ${type} #######`);
 
     wrapSections = () => {
-      imgIndexNext = 1;
+      imgIndexNext = 2;
       const el = main[0];
-      const blog = Array.from(el.childNodes).slice(imgIndexNext, -1);
-      el.append(`<section class="blog__base"></section>`);
-      const wrapper = el.querySelector('.blog__base');
-      wrapper.append(blog);
-      document.removeChild(blog);
-      console.log('wrapped!');
+      const nodes = Array.from(el.childNodes);
+      nodes.slice(imgIndexNext, -1);
+
+      const blog = [];
+      nodes.forEach((item) => {
+        let content = item.innerHTML;
+        if (content) {
+          blog.push(item.innerHTML);
+        }
+      });
+
+      const section = document.createElement('section');
+      const aside = document.createElement('aside');
+      const blogBody = document.createElement('div');
+
+      el.appendChild(section);
+      section.appendChild(aside);
+      section.appendChild(blogBody);
+
+      const blogContent = {
+        author: blog[1],
+        title: blog[2],
+        text: blog[3]
+      }
+      
+      console.log({blogContent});
+
+      aside.insertAdjacentHTML('afterbegin', blogContent.author);
+      blogBody.insertAdjacentHTML('afterbegin', blogContent.text);
+      blogBody.insertAdjacentHTML('afterbegin', blogContent.title);
+
+      const hlxSection = document.querySelectorAll('.hlx-section:not(.image)');
+      hlxSection.forEach((item) => {
+        item.remove();
+      });
     }
     wrapSections();
   }

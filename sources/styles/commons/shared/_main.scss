@@ -13,6 +13,25 @@ img {
   height: auto;
 }
 
+main {
+  max-width: 100%;
+}
+
+aside {
+  margin-top: 60px;
+}
+
+section {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 990px;
+  margin: 0 auto;
+
+  @include breakpoint($b-medium) {
+    flex-direction: row;
+  }
+}
+
 // All overrides
 
 // hero image inside of paragraph should not be restricted to a certain width

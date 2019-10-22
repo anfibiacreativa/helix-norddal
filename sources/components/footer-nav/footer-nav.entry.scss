@@ -1,14 +1,23 @@
 .footer-nav {
-  &__base {
-    width: 100%;
-    height: 30px;
-    border: 1px solid red;
-  }
   
   &__list {
+    text-align: center;
+
+    @include breakpoint($b-medium) {
+      text-align: right;
+    }
+
     &Item {
-      display: inline-block;
-      position: relative;
+      @include breakpoint($b-medium) {
+        display: inline-block;
+        position: relative;
+
+        &:not(:last-child):after {
+          content: '/';
+          width: 10px;
+          height: 10px;
+        }
+      }
     }
   }
 
@@ -16,5 +25,12 @@
     font-size: 1.188rem;
     letter-spacing: .02em;
     transition: opacity .3s;
+    text-decoration: none;
+    color: black;
+
+    &:focus,
+    &:hover {
+      color: darkslategrey;
+    }
   }
 }

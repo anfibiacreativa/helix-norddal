@@ -1,5 +1,21 @@
 <script type="text/javascript" src="/bundle.js"></script>
 <div class="footerWrapper__base">
+  <nav class="social__base">
+    <ul class="social__list">
+      <li class="social__listItem">
+        <a href="#" class="social__link" target="_tab">Icon</a>
+      </li>
+      <li class="social__listItem">
+        <a href="#" class="social__link" target="_tab">Icon</a>
+      </li>
+      <li class="social__listItem">
+        <a href="#" class="social__link" target="_tab">Icon</a>
+      </li>
+      <li class="social__listItem">
+        <a href="#" class="social__link" target="_tab">Icon</a>
+      </li>
+    </ul>
+  </nav>
   <nav class="footer-nav__base">
     <ul class="footer-nav__list">
       <li class="footer-nav__listItem">

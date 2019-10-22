@@ -37,6 +37,31 @@ section {
   }
 }
 
+.footerWrapper {
+  &__base {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 120px;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    @include breakpoint($b-medium) {
+      flex-direction: row;
+    }
+
+    .social__base,
+    .footer-nav__base {
+      width: 50%;
+
+      @include breakpoint($b-medium) {
+        width: 100%;
+      }
+    }
+  }
+}
+
 // All overrides
 
 // hero image inside of paragraph should not be restricted to a certain width

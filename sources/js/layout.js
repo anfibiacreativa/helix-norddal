@@ -35,8 +35,6 @@ const layout = (type = 'blog') => {
         title: blog[2],
         text: blog[3]
       }
-      
-      console.log({blogContent});
 
       aside.insertAdjacentHTML('afterbegin', blogContent.author);
       blogBody.insertAdjacentHTML('afterbegin', blogContent.text);

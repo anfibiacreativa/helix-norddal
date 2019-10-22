@@ -2,11 +2,15 @@
 
 // May later replace with classes if provided
 h1 {
-  font-size: 3.375rem;
+  font-size: 2.25rem;
   line-height: 1.2;
   margin-top: .875rem;
   max-width: 775px;
   margin: 60px auto;
+
+  @include breakpoint($b-large) {
+      font-size: 3.375rem;
+  }
 }
 
 h2 {

@@ -1,11 +1,18 @@
 .header {
   &__base {
+    transition: all .3s ease-in-out;
     width: 100%;
-    height: 30px;
-    background-color: red;
-    color: white;
+    height: 50px;
+    border-bottom: 1px solid grey;
+    background-color: white;
+    color: black;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr;
+    position: fixed;
+
+    @include breakpoint($b-medium) {
+      height: 70px;
+    }
   }
 }

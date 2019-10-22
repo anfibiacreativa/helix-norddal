@@ -1,13 +1,36 @@
 .main-nav {
   &__base {
     width: 100%;
-    height: 30px;
-    border: 1px solid red;
+    height: 100%;
   }
   
   &__list {
+    text-align: center;
+    display: flex;
+    max-width: 675px;
+    flex-direction: row;
+    align-self: stretch;
+
     &Item {
       display: inline-block;
+      flex: 1 0 20%;
+    }
+  }
+  
+  &__link {
+    color: #000;
+    font-size: .875rem;
+    letter-spacing: .025em;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 20px;
+
+    &:focus,
+    &:hover {
+      background-color: rgba(237,237,237,.3);
+      transition: background-color .3s;
     }
   }
 }

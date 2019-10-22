@@ -53,10 +53,10 @@ section {
 
     .social__base,
     .footer-nav__base {
-      width: 50%;
+      width: 100%;
 
       @include breakpoint($b-medium) {
-        width: 100%;
+        width: 50%;
       }
     }
   }

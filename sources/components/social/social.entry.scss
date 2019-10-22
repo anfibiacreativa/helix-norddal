@@ -1,11 +1,17 @@
 .social {
   display: block;
 
-  &__listItem {
+  &__list {
+    text-align: center;
+
     @include breakpoint($b-medium) {
-      display: inline-block;
-      position: relative;
+      text-align: left;
     }
+  }
+
+  &__listItem {
+    display: inline-block;
+    position: relative;
   }
 
   &__link {

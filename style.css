@@ -141,11 +141,11 @@ section {
       flex-direction: row; } }
   .footerWrapper__base .social__base,
   .footerWrapper__base .footer-nav__base {
-    width: 50%; }
+    width: 100%; }
     @media (min-width: 700px) {
       .footerWrapper__base .social__base,
       .footerWrapper__base .footer-nav__base {
-        width: 100%; } }
+        width: 50%; } }
 
 .hlx-section.title p {
   max-width: 100%; }
@@ -192,10 +192,9 @@ section {
 
 .social {
   display: block; }
-  @media (min-width: 700px) {
-    .social__listItem {
-      display: inline-block;
-      position: relative; } }
+  .social__listItem {
+    display: inline-block;
+    position: relative; }
   .social__link {
     text-decoration: none;
     color: black; }

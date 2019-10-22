@@ -1,14 +1,17 @@
 ![](https://hlx.blob.core.windows.net/external/6b93c98ca471faef43870c3df1c493576da67387)
 
-# New to MAX: Creative Super Sessions at Microsoft Theater
-
 ---
+
 class: blog-author
 ---
 
 by [Natalia Venditto](mailto:abc@example.com)
 
 POSTED ON 10-18-2019
+
+---
+
+# New to MAX: Creative Super Sessions at Microsoft Theater
 
 ---
 

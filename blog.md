@@ -6,7 +6,9 @@
 class: blog-author
 ---
 
-by Julie Martin
+by [Natalia Venditto](mailto:abc@example.com)
+
+POSTED ON 10-18-2019
 
 ---
 

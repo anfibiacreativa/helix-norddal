@@ -30,11 +30,17 @@ const layout = (type = 'blog') => {
       section.appendChild(aside);
       section.appendChild(blogBody);
 
+      const blogAuthor = blog.filter(item => item.indexOf('mailto') > -1);
+      const blogHeroImg = blog.filter(item => item.indexOf('<img') > -1);
+      const blogTitle = blog.filter(item => item.indexOf('<h1') > -1);
+      const identifiedEls = [blogHeroImg[0], blogTitle[0], blogAuthor[0]];
+      const blogText = blog.filter(item => !identifiedEls.includes(item));
+
       const blogContent = {
-        image: blog[0],
-        author: blog[1],
-        title: blog[2],
-        text: blog[3]
+        image: blogHeroImg,
+        author: blogAuthor,
+        title: blogTitle,
+        text: blogText
       }
 
       el.insertAdjacentHTML('afterbegin', blogContent.image);

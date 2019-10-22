@@ -1,7 +1,6 @@
 ![](https://hlx.blob.core.windows.net/external/6b93c98ca471faef43870c3df1c493576da67387)
 
 ---
-
 class: blog-author
 ---
 

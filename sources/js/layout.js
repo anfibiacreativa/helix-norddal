@@ -1,18 +1,24 @@
 const types = ['page', 'blog'];
 
 const main = document.getElementsByTagName('main');
-const blogAuthor = main.querySelector('.blog-author');
-const blogText = main.querySelector('.default');
+const blogAuthor = document.querySelector('.blog-author');
 
+// because you should have a way to decide what type of "template" you want
 const layout = (type = 'blog') => {
   if (type === 'blog') {
-    console.log('I am a blog!');
+    console.log(`####### I am a ${type} #######`);
 
-    cacheSections = () => {
-      main.removeChild(blogAuthor);
-      main.removeChild(blogText);
-      console.log('I have remove the items');   
+    wrapSections = () => {
+      imgIndexNext = 1;
+      const el = main[0];
+      const blog = Array.from(el.childNodes).slice(imgIndexNext, -1);
+      el.append(`<section class="blog__base"></section>`);
+      const wrapper = el.querySelector('.blog__base');
+      wrapper.append(blog);
+      document.removeChild(blog);
+      console.log('wrapped!');
     }
+    wrapSections();
   }
 }
 

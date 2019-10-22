@@ -116,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var types = ['page', 'blog'];\nvar main = document.getElementsByTagName('main');\nvar blogAuthor = main.querySelector('.blog-author');\nvar blogText = main.querySelector('.default');\n\nvar layout = function layout() {\n  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'blog';\n\n  if (type === 'blog') {\n    console.log('I am a blog!');\n\n    cacheSections = function cacheSections() {\n      main.removeChild(blogAuthor);\n      main.removeChild(blogText);\n      console.log('I have remove the items');\n    };\n  }\n}; // run layout\n\n\nlayout();\n\n//# sourceURL=webpack:///../sources/js/layout.js?");
+eval("var types = ['page', 'blog'];\nvar main = document.getElementsByTagName('main');\nvar blogAuthor = document.querySelector('.blog-author'); // because you should have a way to decide what type of \"template\" you want\n\nvar layout = function layout() {\n  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'blog';\n\n  if (type === 'blog') {\n    console.log(\"####### I am a \".concat(type, \" #######\"));\n\n    wrapSections = function wrapSections() {\n      imgIndexNext = 1;\n      var el = main[0];\n      var blog = Array.from(el.childNodes).slice(imgIndexNext, -1);\n      el.append(\"<section class=\\\"blog__base\\\"></section>\");\n      var wrapper = el.querySelector('.blog__base');\n      wrapper.append(blog);\n      document.removeChild(blog);\n      console.log('wrapped!');\n    };\n\n    wrapSections();\n  }\n}; // run layout\n\n\nlayout();\n\n//# sourceURL=webpack:///../sources/js/layout.js?");
 
 /***/ }),
 

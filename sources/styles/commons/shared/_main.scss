@@ -30,6 +30,11 @@ section {
   @include breakpoint($b-medium) {
     flex-direction: row;
   }
+
+  ul.li {
+    list-style: disc;
+    list-style-position: inside;
+  }
 }
 
 // All overrides

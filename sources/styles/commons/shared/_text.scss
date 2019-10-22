@@ -7,7 +7,7 @@ ul {
   line-height: 1.8;
   max-width: 700px;
   margin: 0 auto 1rem auto;
-  padding: 0 20px;
+  padding: 0 35px;
 
   @include breakpoint($b-medium) {
     font-size: 1.125rem;

@@ -35,7 +35,7 @@ const layout = (type = 'blog') => {
       // This is reliable in that the author will always have the mailto attribute
       const blogAuthor = blog.filter(item => item.indexOf('mailto') > -1);
       // This can only be done, supposing we always have the same structure
-      const blogTitle = blog[2];
+      const blogTitle = blog[1];
       // const identifiedEls = [blogHeroImg[0], blogTitle[0], blogAuthor[0]];
       // Now we're left with the text
       // const blogText = blog.filter(item => !identifiedEls.includes(item));

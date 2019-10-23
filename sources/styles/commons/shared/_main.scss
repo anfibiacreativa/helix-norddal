@@ -19,6 +19,11 @@ main {
 
 aside {
   margin-top: 60px;
+  padding-left: 35px;
+
+  @include breakpoint($b-large) {
+    padding-left: 0;
+  }
 }
 
 section {
@@ -34,6 +39,14 @@ section {
   ul.li {
     list-style: disc;
     list-style-position: inside;
+  }
+
+  > div {
+    padding: 0 35px;
+
+    @include breakpoint($b-large) {
+      padding: 0 20px;
+    }
   }
 }
 

@@ -66,13 +66,11 @@ ul {
   font-size: 1rem;
   line-height: 1.8;
   max-width: 700px;
-  margin: 0 auto 1rem auto;
-  padding: 0 35px; }
+  margin: 0 auto 1rem auto; }
   @media (min-width: 700px) {
     p,
     ul {
-      font-size: 1.125rem;
-      padding: 0; } }
+      font-size: 1.125rem; } }
 
 h1 {
   font-size: 2.25rem;
@@ -114,7 +112,11 @@ main {
   max-width: 100%; }
 
 aside {
-  margin-top: 60px; }
+  margin-top: 60px;
+  padding-left: 35px; }
+  @media (min-width: 1025px) {
+    aside {
+      padding-left: 0; } }
 
 section {
   display: flex;
@@ -127,6 +129,11 @@ section {
   section ul.li {
     list-style: disc;
     list-style-position: inside; }
+  section > div {
+    padding: 0 35px; }
+    @media (min-width: 1025px) {
+      section > div {
+        padding: 0 20px; } }
 
 .footerWrapper__base {
   display: flex;

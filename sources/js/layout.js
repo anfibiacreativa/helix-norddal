@@ -4,12 +4,14 @@ const main = document.getElementsByTagName('main');
 const blogAuthor = document.querySelector('.blog-author');
 
 // because you should have a way to decide what type of "template" you want
-const layout = (type = 'blog') => {
-  if (type === 'blog') {
-    console.log(`####### I am a ${type} #######`);
+const layout = () => {
+  const el = main[0];
+  const isBlog = () => {
+    return main[0].firstChild.className !== 'author-page';
+  }
+  if (isBlog()) {
 
     wrapSections = () => {
-      const el = main[0];
 
       const section = document.createElement('section');
       const aside = document.createElement('aside');

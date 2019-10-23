@@ -190,7 +190,8 @@ section {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr;
-  position: fixed; }
+  position: fixed;
+  z-index: 1; }
   @media (min-width: 700px) {
     .header__base {
       height: 70px; } }

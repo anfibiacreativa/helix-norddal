@@ -7,8 +7,6 @@ const layout = () => {
     return el.lastChild.className.indexOf('author-page') === -1;
   }
   wrapSections = () => {
-    const authorTeaser = document.createElement('div');
-
     let blogHeroImg = {};
     let blogTitle = {};
     let blogAuthor = {};
@@ -58,10 +56,17 @@ const layout = () => {
         aside.appendChild(blogAuthor);
       }
     } else {
-      // probably should rename variables to make them more generic
+      const authorTeaser = document.createElement('section');
+      const authorImg = el.lastChild.querySelector('img');
+
+      console.log({authorImg});
       el.appendChild(authorTeaser);
-      authorTeaser.appendChild(blogHeroImg);
-      authorTeaser.appendChild(blogBody);
+      authorTeaser.appendChild(authorImg);
+
+      const authorData = [...el.children];
+      authorData.forEach((child) => {
+        authorTeaser.appendChild(child)
+      });
     }
   }
   wrapSections();

@@ -39,7 +39,7 @@ module.exports = {
   resolve: {
     alias: alias,
     modules: [
-      paths.NODE_MODULES, 'node_modules',
+      NODE_MODULES_PATH, './node_modules',
     ],
   },
   plugins: [

@@ -1,9 +1,49 @@
-.author-teaser {
+// adding section for specificity with generics
+section.author-teaser {
   &__base {
     padding-top: 70px;
+    background-color: #ffffff;
+    max-width: 900px;
+    border: 1px solid #f7f4f4;
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
 
     @include breakpoint($b-medium) {
       padding-top: 50px;
+      margin: 0;
+    }
+
+    > div {
+      padding: 35px;
+
+      &:first-child {
+        padding: 0;
+        width: 50%;
+        transform: translate(50%);
+      }
+
+      @include breakpoint($b-medium) {
+        width: 50%;
+        margin-top: 0;
+      }
+      p {
+        font-size: .875rem;
+        line-height: 1.5;
+        text-align: center;
+  
+        @include breakpoint($b-medium) {
+          text-align: left;
+        }
+      }
+
+      h1 {
+        line-height: 1;
+      }
+
+      img {
+        box-shadow: 0 5px 29px 0
+      }
     }
   }
 }

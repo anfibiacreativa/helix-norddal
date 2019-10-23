@@ -102,7 +102,8 @@ h3 {
 html,
 body {
   font-family: "AdobeClean-Regular", Arial, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #0a0a0a; }
 
 img {
   width: 100%;
@@ -110,6 +111,8 @@ img {
 
 main {
   max-width: 100%; }
+  main.author-page__base {
+    background-color: #f7f4f4; }
 
 aside {
   margin-top: 60px;
@@ -239,9 +242,37 @@ section {
     .social__link:focus, .social__link:hover {
       color: darkslategrey; }
 
-.author-teaser__base {
-  padding-top: 70px; }
+section.author-teaser__base {
+  padding-top: 70px;
+  background-color: #ffffff;
+  max-width: 900px;
+  border: 1px solid #f7f4f4;
+  margin: 0 60px;
+  display: flex;
+  flex-direction: column; }
   @media (min-width: 700px) {
-    .author-teaser__base {
-      padding-top: 50px; } }
+    section.author-teaser__base {
+      padding-top: 50px;
+      margin: 0; } }
+  section.author-teaser__base > div {
+    padding: 35px; }
+    section.author-teaser__base > div:first-child {
+      padding: 0;
+      width: 50%;
+      transform: translate(50%); }
+    @media (min-width: 700px) {
+      section.author-teaser__base > div {
+        width: 50%;
+        margin-top: 0; } }
+    section.author-teaser__base > div p {
+      font-size: .875rem;
+      line-height: 1.5;
+      text-align: center; }
+      @media (min-width: 700px) {
+        section.author-teaser__base > div p {
+          text-align: left; } }
+    section.author-teaser__base > div h1 {
+      line-height: 1; }
+    section.author-teaser__base > div img {
+      box-shadow: 0 5px 29px 0; }
 

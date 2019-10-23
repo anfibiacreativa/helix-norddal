@@ -56,13 +56,16 @@ const layout = () => {
         aside.appendChild(blogAuthor);
       }
     } else {
+      el.classList.add('author-page__base');
       const authorTeaser = document.createElement('section');
       authorTeaser.classList.add('author-teaser__base');
       const authorImg = el.lastChild.querySelector('img');
+      const authorImgWrapper = document.createElement('div');
       const authorBioWrapper = document.createElement('div');
 
       el.appendChild(authorTeaser);
-      authorTeaser.appendChild(authorImg);
+      authorTeaser.appendChild(authorImgWrapper);
+      authorImgWrapper.appendChild(authorImg);
 
       const authorData = [...el.children];
       authorData.pop();

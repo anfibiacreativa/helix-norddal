@@ -5,6 +5,7 @@ html,
 body {
   font-family: $adobe-regular;
   font-size: $base-font-size;
+  color: #0a0a0a;
 }
 
 // globally constrain images for responsive behavior
@@ -15,6 +16,10 @@ img {
 
 main {
   max-width: 100%;
+
+  &.author-page__base {
+    background-color: #f7f4f4;
+  }
 }
 
 aside {

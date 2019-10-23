@@ -1,0 +1,61 @@
+// targetting the ais-hits as provided
+.ais-Hits {
+  max-width: 900px;
+  margin: 30px auto;
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include breakpoint($b-medium) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+
+  &-item {
+    background-color: white;
+  }
+}
+
+.related-topics {
+
+  &__wrapper {
+    border-top: #f7f4f4;
+    min-height: 350px;
+  }
+
+  &__txt {
+    font-size: 0.75rem;
+    color: #999999;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+
+    &:hover,
+    &:focus {
+      opacity: .5;
+    }
+  }
+
+  &__subHl {
+    transition: color 350ms;
+    font-size: 1.625rem;
+    line-height: 1.1;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+    padding: 0 20px;
+
+    &:hover,
+    &:focus {
+      color: #999999;
+    }
+  }
+
+  // Specificity! Specificity everywhere!
+  h2 {
+    margin-top: 0 !important;
+  }
+}

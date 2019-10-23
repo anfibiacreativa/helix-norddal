@@ -1,13 +1,14 @@
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
-<div class="hit">
-  <div class="hit-image">
-    <img src="{{hero}}" alt="{{name}}">
-  </div>
-  <div class="hit-content">
-    <h2 class="hit-name">{{{title}}}</h2>
-    <p class="hit-description">{{{author}}}</p>
-    <a class="hit-view" href="https://helix-norddal-anfibiacreativa.project-helix.page{{{path}}}" target="_new">view</a>
+<div class="related-topics__base hit">
+  <div class="related-topics__wrapper hit-content">
+    <div class="related-topics__thumb hit-image">
+      <img src="{{hero}}" alt="{{name}}">
+    </div>
+    <a class="related-topics__link hit-view" href="https://helix-norddal-anfibiacreativa.project-helix.page{{{path}}}" target="_new">
+      <span class="related-topics__txt hit-description">{{{author}}}</span>
+      <h2 class="related-topics__subHl hit-name">{{{title}}}</h2>
+    </a>
   </div>
 </div>
 </script>

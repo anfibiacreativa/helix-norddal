@@ -20,6 +20,11 @@ const layout = (type = 'blog') => {
         }
       });
 
+      // what if it potentially has many h1's?
+      const titles = blog.filter(item => item.indexOf('<h1') > -1);
+      // what if it potentially has many images?
+      const images = blog.filter(item => item.indexOf('<img') > -1);
+
       const section = document.createElement('section');
       const aside = document.createElement('aside');
       const blogBody = document.createElement('div');
@@ -31,11 +36,11 @@ const layout = (type = 'blog') => {
       section.appendChild(blogBody);
 
       // This can only be done, supposing we always have the same structure
-      const blogHeroImg = blog.shift();
+      const blogHeroImg = images[0];
       // This is reliable in that the author will always have the mailto attribute
       const blogAuthor = blog.filter(item => item.indexOf('mailto') > -1);
       // This can only be done, supposing we always have the same structure
-      const blogTitle = blog[1];
+      const blogTitle = titles[0];
       // const identifiedEls = [blogHeroImg[0], blogTitle[0], blogAuthor[0]];
       // Now we're left with the text
       // const blogText = blog.filter(item => !identifiedEls.includes(item));

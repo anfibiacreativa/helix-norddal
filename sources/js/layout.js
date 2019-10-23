@@ -30,20 +30,19 @@ const layout = (type = 'blog') => {
       section.appendChild(aside);
       section.appendChild(blogBody);
 
-      const blogHeroImg = blog.shift();
       // This can only be done, supposing we always have the same structure
-      console.log({blogHeroImg});
+      const blogHeroImg = blog.shift();
       // This is reliable in that the author will always have the mailto attribute
       const blogAuthor = blog.filter(item => item.indexOf('mailto') > -1);
       // This can only be done, supposing we always have the same structure
       const blogTitle = blog[1];
-      console.log({blogTitle});
       // const identifiedEls = [blogHeroImg[0], blogTitle[0], blogAuthor[0]];
       // Now we're left with the text
       // const blogText = blog.filter(item => !identifiedEls.includes(item));
       // We can also only do this if we consider having the full text as the last rendered div coming from the server
       const blogText = blog.pop();
 
+      // We want to have a destructured object to be able to better target elements in the future, should we apply further transformations
       const blogContent = {
         image: blogHeroImg,
         author: blogAuthor,

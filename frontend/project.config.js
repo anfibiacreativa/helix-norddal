@@ -9,6 +9,6 @@ const PATHS = {
 module.exports = {
   ...CONSTANTS,
   ...PATHS,
-  NODE_MODULES_PATH: './node_modules',
+  NODE_MODULES_PATH: '../../node_modules',
   JS_COMPONENTS_ALIAS: '../components',
 }

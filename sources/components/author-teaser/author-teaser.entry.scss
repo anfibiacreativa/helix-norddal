@@ -1,0 +1,9 @@
+.author-teaser {
+  &__base {
+    padding-top: 70px;
+
+    @include breakpoint($b-medium) {
+      padding-top: 50px;
+    }
+  }
+}

@@ -239,3 +239,9 @@ section {
     .social__link:focus, .social__link:hover {
       color: darkslategrey; }
 
+.author-teaser__base {
+  padding-top: 70px; }
+  @media (min-width: 700px) {
+    .author-teaser__base {
+      padding-top: 50px; } }
+

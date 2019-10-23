@@ -57,15 +57,19 @@ const layout = () => {
       }
     } else {
       const authorTeaser = document.createElement('section');
+      authorTeaser.classList.add('author-teaser__base');
       const authorImg = el.lastChild.querySelector('img');
+      const authorBioWrapper = document.createElement('div');
 
       console.log({authorImg});
       el.appendChild(authorTeaser);
       authorTeaser.appendChild(authorImg);
 
       const authorData = [...el.children];
+      authorData.pop();
+      authorTeaser.appendChild(authorBioWrapper);
       authorData.forEach((child) => {
-        authorTeaser.appendChild(child)
+        authorBioWrapper.appendChild(child)
       });
     }
   }

@@ -58,5 +58,5 @@ app({
   // This is the public API key which can be safely used in your frontend code.This key is usable
   // for search queries and it's also able to list the indices you've got access to.
   apiKey: 'c5f99b37bfef18fd6ad1c440b5abd6c9',
-  indexName: 'anfibiacreativa--helix-norddal',
+  indexName: 'anfibiacreativa--helix-norddal--blog-posts',
 });

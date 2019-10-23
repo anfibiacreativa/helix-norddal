@@ -36,23 +36,27 @@ const layout = (type = 'blog') => {
       section.appendChild(blogBody);
 
       // This can only be done, supposing we always have the same structure
-      const blogHeroImg = images[0];
+      const blogHeroImg = images[0] || '';
       // This is reliable in that the author will always have the mailto attribute
-      const blogAuthor = blog.filter(item => item.indexOf('mailto') > -1);
+      const blogAuthor = blog.filter(item => item.indexOf('mailto') > -1) || '';
       // This can only be done, supposing we always have the same structure
-      const blogTitle = titles[0];
-      // const identifiedEls = [blogHeroImg[0], blogTitle[0], blogAuthor[0]];
+      const blogTitle = titles[0] || '';
       // Now we're left with the text
-      // const blogText = blog.filter(item => !identifiedEls.includes(item));
+      const blogRelated = blog.filter(item => item.indexOf('blog-topics') > -1) || '';
+      // collect all identified items so we can exclude the rest
+      const identifiedEls = [blogHeroImg[0], blogTitle[0], blogAuthor[0], blogRelated[0]];
+      const blogText = blog.filter(item => !identifiedEls.includes(item)) || '';
       // We can also only do this if we consider having the full text as the last rendered div coming from the server
-      const blogText = blog.pop();
+      // At first I thought to pop the last item, but now we have the related topics list as a different element
+      //const blogText = blog.pop();
 
       // We want to have a destructured object to be able to better target elements in the future, should we apply further transformations
       const blogContent = {
         image: blogHeroImg,
         author: blogAuthor,
         title: blogTitle,
-        text: blogText
+        text: blogText,
+        related: blogRelated
       }
 
       el.insertAdjacentHTML('afterbegin', blogContent.image);

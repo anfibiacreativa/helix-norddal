@@ -14,7 +14,7 @@ const layout = () => {
 
     // convert HTML Collection to iterable list for easier DOM Manipulation
     const els = [...el.children];
-    
+
     if (isBlog()) {
       // create a new section and append the necessary divs
       const section = document.createElement('section');
@@ -61,7 +61,6 @@ const layout = () => {
       const authorImg = el.lastChild.querySelector('img');
       const authorBioWrapper = document.createElement('div');
 
-      console.log({authorImg});
       el.appendChild(authorTeaser);
       authorTeaser.appendChild(authorImg);
 

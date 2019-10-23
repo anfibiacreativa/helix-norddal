@@ -39,12 +39,12 @@ module.exports = {
   resolve: {
     alias: alias,
     modules: [
-      paths.NODE_MODULES_PATH, './node_modules',
+      paths.NODE_MODULES_PATH, '../../frontend/node_modules',
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
         filename: 'style.css'
-    }) 
+    })
   ]
 };

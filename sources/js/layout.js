@@ -4,13 +4,9 @@ const main = document.getElementsByTagName('main');
 const layout = () => {
   const el = main[0];
   const isBlog = () => {
-    return el.firstChild.className !== 'author-page';
+    return el.lastChild.className.indexOf('author-page') === -1;
   }
   wrapSections = () => {
-
-    const section = document.createElement('section');
-    const aside = document.createElement('aside');
-    const blogBodyDiv = document.createElement('div');
     const authorTeaser = document.createElement('div');
 
     let blogHeroImg = {};
@@ -20,29 +16,31 @@ const layout = () => {
 
     // convert HTML Collection to iterable list for easier DOM Manipulation
     const els = [...el.children];
-
-    if (els && els.length > 0) {
-      els.forEach((element) => {
-        if (element.className.indexOf('blog-author') >= 0) {
-          blogAuthor = element;
-        }
-        else if (element.querySelector('img')) {
-          blogHeroImg = element;
-        }
-        else if (element.querySelector('h1')) {
-          blogTitle = element;
-        } else {
-          blogBody = element;
-        }
-      })
-    }
-    // empty main from content
-    el.innerHTML = '';
-
-    // create a new section and append the necessary divs
     
+    if (isBlog()) {
+      // create a new section and append the necessary divs
+      const section = document.createElement('section');
+      const aside = document.createElement('aside');
+      const blogBodyDiv = document.createElement('div');
 
-    if (isBlog) {
+      if (els && els.length > 0) {
+        els.forEach((element) => {
+          if (element.className.indexOf('blog-author') >= 0) {
+            blogAuthor = element;
+          }
+          else if (element.querySelector('img')) {
+            blogHeroImg = element;
+          }
+          else if (element.querySelector('h1')) {
+            blogTitle = element;
+          } else {
+            blogBody = element;
+          }
+        });
+      }
+      // empty main from content
+      el.innerHTML = '';
+
       if (blogHeroImg) {
         el.appendChild(blogHeroImg);
       }
@@ -50,13 +48,13 @@ const layout = () => {
       section.appendChild(aside);
       section.appendChild(blogBodyDiv);
 
-      if (blogTitle) {
+      if (blogTitle && blogTitle.childElementCount > 0) {
         blogBodyDiv.appendChild(blogTitle);
       }
-      if (blogBody) {
+      if (blogBody && blogBody.childElementCount > 0) {
         blogBodyDiv.appendChild(blogBody);
       }
-      if (blogAuthor) {
+      if (blogAuthor && blogAuthor.childElementCount > 0) {
         aside.appendChild(blogAuthor);
       }
     } else {

@@ -1,5 +1,3 @@
-<script type="text/javascript" src="/bundle.js"></script>
-
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
 <div class="hit">
@@ -32,3 +30,5 @@
 - [Privay Policy](https://www.adobe.com/privacy.html)
 - [Terms of Use](https://www.adobe.com/legal/terms.html)
 - [![](https://c.evidon.com/pub/icong1.png) AdChoices](#)
+
+<script type="text/javascript" src="/bundle.js"></script>

@@ -19,6 +19,11 @@ main {
 
   &.author-page__base {
     background-color: #f7f4f4;
+    padding-top: 50px;
+
+    @include breakpoint($b-large) {
+      padding-top: 90px;
+    }
   }
 }
 

@@ -1,17 +1,18 @@
 // adding section for specificity with generics
 section.author-teaser {
   &__base {
-    padding-top: 70px;
+    padding-top: 5px;
     background-color: #ffffff;
     max-width: 900px;
     border: 1px solid #f7f4f4;
     margin: 0 60px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 
     @include breakpoint($b-medium) {
       padding-top: 50px;
-      margin: 0;
+      flex-direction: row;
     }
 
     > div {
@@ -21,6 +22,11 @@ section.author-teaser {
         padding: 0;
         width: 50%;
         transform: translate(50%);
+
+        @include breakpoint($b-medium) {
+          width: 30%;
+          transform: translate(-30px);
+        }
       }
 
       @include breakpoint($b-medium) {
@@ -42,7 +48,7 @@ section.author-teaser {
       }
 
       img {
-        box-shadow: 0 5px 29px 0
+        box-shadow: 0 5px 29px 0;
       }
     }
   }

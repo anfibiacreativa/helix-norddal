@@ -1,3 +1,5 @@
+<script type="text/javascript" src="/bundle.js"></script>
+
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
 <div class="hit">
@@ -18,38 +20,15 @@
 </script>
 <!-- /TEMPLATES -->
 
-<div class="footerWrapper__base">
-  <nav class="social__base">
-    <ul class="social__list">
-      <li class="social__listItem">
-        <a href="#" class="social__link" target="_tab">Icon</a>
-      </li>
-      <li class="social__listItem">
-        <a href="#" class="social__link" target="_tab">Icon</a>
-      </li>
-      <li class="social__listItem">
-        <a href="#" class="social__link" target="_tab">Icon</a>
-      </li>
-      <li class="social__listItem">
-        <a href="#" class="social__link" target="_tab">Icon</a>
-      </li>
-    </ul>
-  </nav>
-  <nav class="footer-nav__base">
-    <ul class="footer-nav__list">
-      <li class="footer-nav__listItem">
-        <a href="#" class="footer-nav__link" target="_tab">News</a>
-      </li>
-      <li class="footer-nav__listItem">
-        <a href="#" class="footer-nav__link" target="_tab">My Feed</a>
-      </li>
-      <li class="footer-nav__listItem">
-        <a href="#" class="footer-nav__link" target="_tab">Topics</a>
-      </li>
-      <li class="footer-nav__listItem">
-        <a href="#" class="footer-nav__link" target="_tab">Products</a>
-      </li>
-    </ul>
-</div>
+- [:adobe:](https://adobe.com/)
+- [:facebook:](https://www.facebook.com/Adobe/)
+- [:twitter:](https://twitter.com/Adobe)
+- [:instagram:](https://instagram.com/Adobe)
+- [:youtube:](https://www.youtube.com/user/AdobeSystems)
+- [:linkedin:](https://www.linkedin.com/company/1480/)
 
-<script type="text/javascript" src="/bundle.js"></script>
+- [News](#)
+- [My Feed](https://helpx.adobe.com/contact.html)
+- [Privay Policy](https://www.adobe.com/privacy.html)
+- [Terms of Use](https://www.adobe.com/legal/terms.html)
+- [![](https://c.evidon.com/pub/icong1.png) AdChoices](#)

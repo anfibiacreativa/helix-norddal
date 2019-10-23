@@ -14,7 +14,7 @@ const layout = () => {
 
     // convert HTML Collection to iterable list for easier DOM Manipulation
     const els = [...el.children];
-    
+
     if (isBlog()) {
       // create a new section and append the necessary divs
       const section = document.createElement('section');
@@ -56,17 +56,17 @@ const layout = () => {
         aside.appendChild(blogAuthor);
       }
     } else {
-      const authorTeaser = document.createElement('section');
-      const authorImg = el.lastChild.querySelector('img');
-
-      console.log({authorImg});
-      el.appendChild(authorTeaser);
-      authorTeaser.appendChild(authorImg);
-
-      const authorData = [...el.children];
-      authorData.forEach((child) => {
-        authorTeaser.appendChild(child)
-      });
+      // const authorTeaser = document.createElement('section');
+      // const authorImg = el.lastChild.querySelector('img');
+      //
+      // console.log({authorImg});
+      // el.appendChild(authorTeaser);
+      // authorTeaser.appendChild(authorImg);
+      //
+      // const authorData = [...el.children];
+      // authorData.forEach((child) => {
+      //   authorTeaser.appendChild(child)
+      // });
     }
   }
   wrapSections();

@@ -25,6 +25,8 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
-    "component-loader-js": "^4.0.0"
+    "algoliasearch": "^3.35.1",
+    "component-loader-js": "^4.0.0",
+    "instantsearch.js": "^4.0.0"
   }
 }

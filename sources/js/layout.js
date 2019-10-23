@@ -30,11 +30,19 @@ const layout = (type = 'blog') => {
       section.appendChild(aside);
       section.appendChild(blogBody);
 
+      const blogHeroImg = blog.shift();
+      // This can only be done, supposing we always have the same structure
+      console.log({blogHeroImg});
+      // This is reliable in that the author will always have the mailto attribute
       const blogAuthor = blog.filter(item => item.indexOf('mailto') > -1);
-      const blogHeroImg = blog.filter(item => item.indexOf('<img') > -1);
-      const blogTitle = blog.filter(item => item.indexOf('<h1') > -1);
-      const identifiedEls = [blogHeroImg[0], blogTitle[0], blogAuthor[0]];
-      const blogText = blog.filter(item => !identifiedEls.includes(item));
+      // This can only be done, supposing we always have the same structure
+      const blogTitle = blog[1];
+      console.log({blogTitle});
+      // const identifiedEls = [blogHeroImg[0], blogTitle[0], blogAuthor[0]];
+      // Now we're left with the text
+      // const blogText = blog.filter(item => !identifiedEls.includes(item));
+      // We can also only do this if we consider having the full text as the last rendered div coming from the server
+      const blogText = blog.pop();
 
       const blogContent = {
         image: blogHeroImg,

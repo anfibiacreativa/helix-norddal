@@ -44,7 +44,8 @@ const layout = (type = 'blog') => {
       // Now we're left with the text
       const blogRelated = blog.filter(item => item.indexOf('blog-topics') > -1) || '';
       // collect all identified items so we can exclude the rest
-      const identifiedEls = [blogHeroImg[0], blogTitle[0], blogAuthor[0], blogRelated[0]];
+      const identifiedEls = [blogHeroImg, blogTitle, blogAuthor[0], blogRelated[0]];
+      console.log({blogRelated});
       const blogText = blog.filter(item => !identifiedEls.includes(item)) || '';
       // We can also only do this if we consider having the full text as the last rendered div coming from the server
       // At first I thought to pop the last item, but now we have the related topics list as a different element

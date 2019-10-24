@@ -1,13 +1,8 @@
-# Helix: Basic Example
+---
+class: homepage
+---
 
-It works, your Helix website is up and running!
+# Adobe Blog
 
-## What's next?
+Welcome to the Adobe Blog
 
-See the [README](./README.md) of this repository for the next steps.
-
-## Blogs
-
-- [New To Max](/posts/new-to-max.html)
-- [Adobe Introduces AI](/posts/adobe-introduces-ai-powered-personalization-and-streamlined-activation.html)
-- [Thanksgiving](/posts/havent-booked-thanksgiving-travel-yet-wait-until-november.html)

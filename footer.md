@@ -24,7 +24,7 @@
 - [:facebook:](https://www.facebook.com/Adobe/)
 - [:twitter:](https://twitter.com/Adobe)
 - [:instagram:](https://instagram.com/Adobe)
-- [:youtube:](https://www.youtube.com/user/AdobeSystems)
+- [:youtube:](#)
 - [:linkedin:](https://www.linkedin.com/company/1480/)
 
 

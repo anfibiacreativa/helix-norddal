@@ -11,6 +11,7 @@ indices:
       author:
         select: .blog-author p a
         value: "{textContent}"
+        faceted: true
       title:
         select: h1:first-of-type
         value: "{textContent}"
@@ -20,6 +21,7 @@ indices:
       topics:
         select: .blog-topics.default > ul > li
         value: "{textContent}"
+        faceted: true
       hero:
         select: main > div > img:first-of-type
         value: "{src}"

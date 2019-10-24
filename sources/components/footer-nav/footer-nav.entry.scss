@@ -37,7 +37,7 @@
 
 footer {
   // icons
-  > ul:first-child {
+  ul:first-child {
     text-align: center;
 
     @include breakpoint($b-medium) {
@@ -45,12 +45,20 @@ footer {
     }
 
     li {
-      width: 30px;
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
       display: inline-block;
       position: relative;
+
+      img {
+          width: 100%;
+          height: auto;
+      }
     }
   }
-  > ul:nth-child(2) {
+
+  ul:nth-child(2) {
     text-align: center;
     
     li {

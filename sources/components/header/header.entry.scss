@@ -16,4 +16,14 @@
       height: 70px;
     }
   }
+
+  &__column {
+    &:nth-child() {
+      display: none;
+
+      @include breakpoint($b-medium) {
+        display: block;
+      }
+    }
+  }
 }

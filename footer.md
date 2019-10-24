@@ -8,6 +8,7 @@
     <a class="related-topics__link hit-view" href="https://helix-norddal-anfibiacreativa.project-helix.page{{{path}}}" target="_new">
       <span class="related-topics__txt hit-description">{{{author}}}</span>
       <h2 class="related-topics__subHl hit-name">{{{title}}}</h2>
+      <span class="related-topics__txt hit-description">{{{date}}}</span>
     </a>
   </div>
 </div>
@@ -25,6 +26,7 @@
 - [:instagram:](https://instagram.com/Adobe)
 - [:youtube:](https://www.youtube.com/user/AdobeSystems)
 - [:linkedin:](https://www.linkedin.com/company/1480/)
+
 
 - [News](#)
 - [My Feed](https://helpx.adobe.com/contact.html)

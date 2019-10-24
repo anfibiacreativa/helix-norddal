@@ -13,11 +13,6 @@ const layout = () => {
   };
 
   wrapSections = () => {
-    let blogHeroImg = {};
-    let blogTitle = {};
-    let blogAuthor = {};
-    let blogBody = [];
-
     // convert HTML Collection to iterable list for easier DOM Manipulation
     const els = [...el.children];
 
@@ -44,6 +39,11 @@ const layout = () => {
     } else if (isHomePage()) {
       console.log('homepage');
     } else {
+      let blogHeroImg;
+      let blogTitle;
+      let blogAuthor;
+      const blogBody = [];
+
       console.log('blogpage');
       // create a new section and append the necessary divs
       const section = document.createElement('section');
@@ -55,10 +55,10 @@ const layout = () => {
           if (element.className.indexOf('blog-author') >= 0) {
             blogAuthor = element;
           }
-          else if (element.querySelector('img')) {
+          else if (!blogHeroImg && element.querySelector('img')) {
             blogHeroImg = element;
           }
-          else if (element.querySelector('h1')) {
+          else if (!blogTitle && element.querySelector('h1')) {
             blogTitle = element;
           } else {
             blogBody.push(element);
@@ -75,14 +75,12 @@ const layout = () => {
       section.appendChild(aside);
       section.appendChild(blogBodyDiv);
 
-      if (blogTitle && blogTitle.childElementCount > 0) {
+      if (blogTitle) {
         blogBodyDiv.appendChild(blogTitle);
       }
-      if (blogBody.length > 0) {
-        blogBody.forEach((body) => {
-          blogBodyDiv.appendChild(body);
-        });
-      }
+      blogBody.forEach((body) => {
+        blogBodyDiv.appendChild(body);
+      });
       if (blogAuthor && blogAuthor.childElementCount > 0) {
         aside.appendChild(blogAuthor);
         const blogAuthorLink = blogAuthor.getElementsByTagName('a')[0];

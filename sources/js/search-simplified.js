@@ -23,11 +23,26 @@ function formatDate(timestamp) {
 }
 
 function app(opts) {
-  const author = document.getElementsByTagName('title')[0].text;
   const main = document.getElementsByTagName('main')[0];
   const elHits = document.createElement('div');
   elHits.setAttribute('id', 'related-posts');
   main.appendChild(elHits);
+
+  const cfg = {
+    hitsPerPage: 10,
+  };
+
+  if (document.querySelector('div.homepage')) {
+    // just list
+  } else if (document.querySelector('div.author-page')) {
+    const author = document.getElementsByTagName('title')[0].text;
+    cfg.facetFilters = [
+      `author:${author}`
+    ]
+  } else {
+    // don't show any searches
+    return;
+  }
 
   const search = instantsearch({
     searchClient: algoliasearch(opts.appId, opts.apiKey),
@@ -37,12 +52,7 @@ function app(opts) {
   });
 
   search.addWidgets([
-    configure({
-      hitsPerPage: 10,
-      facetFilters: [
-        `author:${author}`
-      ]
-    })
+    configure(cfg)
   ]);
 
   search.addWidget(
@@ -53,6 +63,7 @@ function app(opts) {
         empty: getTemplate('no-results'),
       },
       transformItems(items) {
+        console.log(items);
         return items.map(item => ({
           ...item,
           date: formatDate(item.date),

@@ -1,0 +1,57 @@
+.blog-topics {
+  margin-top: 50px;
+  
+  ul {
+    margin: 0 auto;
+    width: 400px;
+
+    @include breakpoint($b-medium) {
+      width: 600px;
+    }
+
+    li {
+      transition: all .3s ease-in-out;
+      padding: 16px 71px 16px 14px;
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      overflow: hidden;
+      border: 1px solid #eaeaea;
+      border-radius: 6px;
+      display: inline-block;
+      min-width: 150px;
+      text-transform: uppercase;
+      font-size: .693rem;
+      margin-left: 25px;
+
+      &:hover,
+      &:focus {
+        border-radius: 25px;
+        color: #007bff
+      }
+
+      &:after {
+        content: '+';
+        display: table-cell;
+        border: 1px solid #999999;
+        width: 30px;
+        height: 65%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding-top: 16px;
+        padding-left: 24px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+// override for the after element hover state
+ul li:hover {
+  &:after {
+    transition: all .4s ease-in-out;
+    border-radius: 25px;
+  }
+}

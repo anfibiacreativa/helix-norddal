@@ -1,4 +1,4 @@
-- [:adobe: AdobeBlog](https://adobe.com/)
+- [:adobe: AdobeBlog](/)
 
 
 - [News](#)

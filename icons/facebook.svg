@@ -1,2 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 18" class="fb-icon"><path fill="rgb(65, 88, 147)" stroke="none" d="M90.494,8587.99v-8.21h2.954l0.442-3.2h-3.4v-2.04c0-.93.276-1.56,1.7-1.56H94.01v-2.86a25.289,25.289,0,0,0-2.647-.13c-2.619,0-4.412,1.49-4.412,4.23v2.36H83.99v3.2h2.961v8.21h3.542Z" transform="translate(-84 -8570)" class="hover-fill-trans"></path></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-width:0.2835;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M10.5,18V9.8h3l0.4-3.2h-3.4v-2c0-0.9,0.3-1.6,1.7-1.6H14V0.1C13.1,0,12.2,0,11.3,0C8.7,0,6.9,1.5,6.9,4.2v2.4
+	H4v3.2h3V18H10.5L10.5,18z"/>
+</svg>

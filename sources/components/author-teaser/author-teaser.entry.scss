@@ -11,6 +11,10 @@ section.author-teaser {
     margin: 35px 35px;
 
     @include breakpoint($b-large) {
+      margin: 0 auto;
+    }
+
+    @include breakpoint($b-medium) {
       flex-direction: row;
       margin: 0 auto;
     }

@@ -19,17 +19,4 @@
 </script>
 <!-- /TEMPLATES -->
 
-- [:adobe:](https://adobe.com/)
-- [:facebook:](https://www.facebook.com/Adobe/)
-- [:twitter:](https://twitter.com/Adobe)
-- [:instagram:](https://instagram.com/Adobe)
-- [:youtube:](https://www.youtube.com/user/AdobeSystems)
-- [:linkedin:](https://www.linkedin.com/company/1480/)
-
-- [News](#)
-- [My Feed](https://helpx.adobe.com/contact.html)
-- [Privay Policy](https://www.adobe.com/privacy.html)
-- [Terms of Use](https://www.adobe.com/legal/terms.html)
-- [![](https://c.evidon.com/pub/icong1.png) AdChoices](#)
-
 <script type="text/javascript" src="/bundle.js"></script>

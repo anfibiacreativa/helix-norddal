@@ -6,11 +6,15 @@
   &-list {
     display: grid;
     grid-template-columns: 1fr;
+    max-width: 330px;
+    margin: 0 auto;
+    grid-row-gap: 30px;
 
     @include breakpoint($b-medium) {
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 20px;
       grid-row-gap: 20px;
+      max-width: 100%;
     }
   }
 

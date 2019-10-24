@@ -8,9 +8,9 @@ section.author-teaser {
     margin: 0 60px;
     display: flex;
     flex-direction: column;
-    margin: 0 35px;
+    margin: 35px 35px;
 
-    @include breakpoint($b-medium) {
+    @include breakpoint($b-large) {
       flex-direction: row;
       margin: 0 auto;
     }

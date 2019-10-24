@@ -34,3 +34,52 @@
     }
   }
 }
+
+footer {
+  // icons
+  > ul:first-child {
+    text-align: center;
+
+    @include breakpoint($b-medium) {
+      text-align: left;
+    }
+
+    li {
+      width: 30px;
+      display: inline-block;
+      position: relative;
+    }
+  }
+  > ul:nth-child(2) {
+    text-align: center;
+    
+    li {
+      @include breakpoint($b-medium) {
+        display: inline-block;
+        position: relative;
+
+        &:not(:last-child):after {
+          content: '/';
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      a {
+        font-size: 1.188rem;
+        letter-spacing: .02em;
+        transition: opacity .3s;
+        text-decoration: none;
+        color: black;
+
+        &:focus,
+        &:hover {
+          color: darkslategrey;
+        }
+      }
+    }
+    @include breakpoint($b-medium) {
+      text-align: left;
+    }
+  }
+}

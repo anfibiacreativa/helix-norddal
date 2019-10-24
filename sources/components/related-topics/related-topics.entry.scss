@@ -3,6 +3,10 @@
   max-width: 900px;
   margin: 30px auto;
 
+  @include breakpoint($b-x) {
+    margin: 30px 35px;
+  }
+
   &-list {
     display: grid;
     grid-template-columns: 1fr;

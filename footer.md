@@ -5,7 +5,7 @@
     <div class="related-topics__thumb hit-image">
       <img src="{{hero}}" alt="{{name}}">
     </div>
-    <a class="related-topics__link hit-view" href="https://helix-norddal-anfibiacreativa.project-helix.page{{{path}}}" target="_new">
+    <a class="related-topics__link hit-view" href="{{{path}}}" target="_new">
       <span class="related-topics__txt hit-description">{{{author}}}</span>
       <h2 class="related-topics__subHl hit-name">{{{title}}}</h2>
       <span class="related-topics__txt hit-description">{{{date}}}</span>

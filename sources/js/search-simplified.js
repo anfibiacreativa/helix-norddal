@@ -17,6 +17,11 @@ function getTemplate(templateName) {
   return document.querySelector(`#${templateName}-template`).innerHTML;
 }
 
+function formatDate(timestamp) {
+  const d = new Date(timestamp * 1000);
+  return `${d.getMonth() + 1}-${d.getDate()}-${d.getFullYear()}`;
+}
+
 function app(opts) {
   const author = document.getElementsByTagName('title')[0].text;
   const main = document.getElementsByTagName('main')[0];
@@ -46,6 +51,12 @@ function app(opts) {
         templates: {
         item: getTemplate('hit'),
         empty: getTemplate('no-results'),
+      },
+      transformItems(items) {
+        return items.map(item => ({
+          ...item,
+          date: formatDate(item.date),
+        }));
       },
     })
   );

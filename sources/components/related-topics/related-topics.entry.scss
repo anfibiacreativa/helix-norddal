@@ -19,6 +19,14 @@
       grid-column-gap: 20px;
       grid-row-gap: 20px;
       max-width: 100%;
+
+      > li.ais-Hits-item:first-of-type {
+        grid-area: 1 / 1 / 3 / 4; 
+
+        .related-topics__wrapper {
+          display: flex;
+        }
+      }
     }
   }
 

@@ -54,6 +54,8 @@ const layout = () => {
       }
       if (blogAuthor && blogAuthor.childElementCount > 0) {
         aside.appendChild(blogAuthor);
+        const blogAuthorLink = blogAuthor.getElementsByTagName('a')[0];
+        blogAuthorLink.href = blogAuthorLink.href.replace(/^mailto:([^@]*).*$/i, '/authors/$1.html');
       }
     } else {
       el.classList.add('author-page__base');

@@ -40,7 +40,7 @@ footer {
   ul {
     margin-top: 40px;
 
-    @include breakpoint($b-medium) {
+    @include breakpoint($b-large) {
       width: 40%;
       float: left;
     }
@@ -53,13 +53,14 @@ footer {
   ul:first-of-type {
     text-align: center;
 
-    @include breakpoint($b-medium) {
+    @include breakpoint($b-large) {
       text-align: left;
       margin-left: 10%;
     }
 
     li {
-      width: auto;
+      width: 25px;
+      height: 25px;
       overflow: hidden;
       display: inline-block;
       position: relative;
@@ -84,11 +85,13 @@ footer {
       @include breakpoint($b-medium) {
         display: inline-block;
         position: relative;
+        padding-left: 10px;
 
         &:not(:last-child):after {
           content: '/';
           width: 10px;
           height: 10px;
+          padding-left: 10px;
         }
       }
 
@@ -98,6 +101,7 @@ footer {
         transition: opacity .3s;
         text-decoration: none;
         color: black;
+        line-height: 3;
 
         &:focus,
         &:hover {
@@ -108,9 +112,13 @@ footer {
           width: 20px;
           height: 20px;
         }
+
+        @include breakpoint($b-medium) {
+          font-size: .875rem;
+        }
       }
     }
-    @include breakpoint($b-medium) {
+    @include breakpoint($b-large) {
       text-align: right;
       margin-right: 10%;
     }

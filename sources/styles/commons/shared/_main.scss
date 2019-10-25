@@ -36,6 +36,17 @@ aside {
   margin-top: 60px;
   padding-left: 35px;
 
+  a {
+    color: #999999;
+    text-decoration: none;
+    display: block;
+
+    &:hover,
+    &:focus {
+      opacity: .5;
+    }
+  }
+
   @include breakpoint($b-large) {
     padding-left: 0;
   }

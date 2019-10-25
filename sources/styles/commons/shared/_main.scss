@@ -35,15 +35,21 @@ main {
 aside {
   margin-top: 60px;
   padding-left: 35px;
+  font-size: .75rem;
+  text-align: center;
 
-  a {
-    color: #999999;
-    text-decoration: none;
-    display: block;
+  p {
+    margin-bottom: 5px !important;
 
-    &:hover,
-    &:focus {
-      opacity: .5;
+    a {
+      transition: color 350ms;
+      color: #007bff;
+      text-decoration: underline !important;
+  
+      &:hover,
+      &:focus {
+        color: #2c6d9f;
+      }
     }
   }
 
